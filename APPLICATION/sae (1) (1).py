@@ -481,7 +481,7 @@ PROGRAMME PRINCIPALE
 #***************************************************
 # Lecture des fichiers effectifs & recrutements
 #*************************************************** 
-"""
+
 effectif_data=charger_fich("DATA/effectif-metiers_sncf.csv")
 
 nom_fich2="Effectifs des metiers chez sncf : "
@@ -526,12 +526,11 @@ affichage(nom_fich1,resultat_crit_recru)
 #***************************************************
 exporter(effectif_data,"DATA/effectif.csv")
 exporter(recrutement_data,"DATA/recrutement.csv")
-"""
+
 # Recharger les données renommées
 effectif_data=charger_fich("DATA/effectif.csv")
 recrutement_data=charger_fich("DATA/recrutement.csv")
 
-"""
 #***************************************************
 # Extraction par critères des données renommées
 #***************************************************
@@ -545,7 +544,7 @@ print("*"*25)
 print(f"{"Relecture du fichier Recrutement":25}")
 print("*"*25)
 resultat_crit=extraire_plus_criteres(recrutement_data)
-exporter(resultat_crit,"EXPORT/EXTRACTIONS/recrutement.csv")"""
+exporter(resultat_crit,"EXPORT/EXTRACTIONS/recrutement.csv")
 
 
 # Création des variables pour les tcd
@@ -602,7 +601,7 @@ for metier in les_métiers[1:]:
 
 exporter(tableau_evo_homme,f"EXPORT/STATISTIQUES/Evolution _effectif/Evolution_effectif_homme_par_metier.csv")
 
-#sixcieme partie evolution des femme
+#sixieme partie evolution des femme
 tableau_evo_femme = [[[effectif_data[0][1]]+ [les_annees]+["effectif moyen"]]]
 for metier in les_métiers[1:]:
     ligne = []
